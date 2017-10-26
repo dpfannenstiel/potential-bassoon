@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		DA15FD391FA0202F00E60278 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA15FD381FA0202F00E60278 /* main.m */; };
 		DA5E5CF51FA14EB800F69E6B /* BassoonSession.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E5CF41FA14EB800F69E6B /* BassoonSession.m */; };
+		DA5E5CFE1FA16FC900F69E6B /* UnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E5CFD1FA16FC900F69E6B /* UnitTests.m */; };
+		DA5E5D031FA16FEF00F69E6B /* BassoonSession.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E5CF41FA14EB800F69E6B /* BassoonSession.m */; };
+		DA5E5D061FA1753A00F69E6B /* NSArray+SucceedingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E5D051FA1753A00F69E6B /* NSArray+SucceedingObject.m */; };
+		DA5E5D071FA1760B00F69E6B /* NSArray+SucceedingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E5D051FA1753A00F69E6B /* NSArray+SucceedingObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +33,22 @@
 		DA5E5CF31FA14EB800F69E6B /* BassoonSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BassoonSession.h; sourceTree = "<group>"; };
 		DA5E5CF41FA14EB800F69E6B /* BassoonSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BassoonSession.m; sourceTree = "<group>"; };
 		DA5E5CF61FA169EA00F69E6B /* BassoonSession_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BassoonSession_Private.h; sourceTree = "<group>"; };
+		DA5E5CFB1FA16FC900F69E6B /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA5E5CFD1FA16FC900F69E6B /* UnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTests.m; sourceTree = "<group>"; };
+		DA5E5CFF1FA16FC900F69E6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA5E5D041FA1753A00F69E6B /* NSArray+SucceedingObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+SucceedingObject.h"; sourceTree = "<group>"; };
+		DA5E5D051FA1753A00F69E6B /* NSArray+SucceedingObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SucceedingObject.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DA15FD321FA0202F00E60278 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA5E5CF81FA16FC900F69E6B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				DA15FD371FA0202F00E60278 /* potential-bassoon */,
+				DA5E5CFC1FA16FC900F69E6B /* UnitTests */,
 				DA15FD361FA0202F00E60278 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				DA15FD351FA0202F00E60278 /* potential-bassoon */,
+				DA5E5CFB1FA16FC900F69E6B /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,8 +83,19 @@
 				DA5E5CF31FA14EB800F69E6B /* BassoonSession.h */,
 				DA5E5CF61FA169EA00F69E6B /* BassoonSession_Private.h */,
 				DA5E5CF41FA14EB800F69E6B /* BassoonSession.m */,
+				DA5E5D041FA1753A00F69E6B /* NSArray+SucceedingObject.h */,
+				DA5E5D051FA1753A00F69E6B /* NSArray+SucceedingObject.m */,
 			);
 			path = "potential-bassoon";
+			sourceTree = "<group>";
+		};
+		DA5E5CFC1FA16FC900F69E6B /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA5E5CFD1FA16FC900F69E6B /* UnitTests.m */,
+				DA5E5CFF1FA16FC900F69E6B /* Info.plist */,
+			);
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +118,23 @@
 			productReference = DA15FD351FA0202F00E60278 /* potential-bassoon */;
 			productType = "com.apple.product-type.tool";
 		};
+		DA5E5CFA1FA16FC900F69E6B /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA5E5D001FA16FC900F69E6B /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				DA5E5CF71FA16FC900F69E6B /* Sources */,
+				DA5E5CF81FA16FC900F69E6B /* Frameworks */,
+				DA5E5CF91FA16FC900F69E6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = DA5E5CFB1FA16FC900F69E6B /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +145,10 @@
 				ORGANIZATIONNAME = "Dustin Pfannenstiel";
 				TargetAttributes = {
 					DA15FD341FA0202F00E60278 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					DA5E5CFA1FA16FC900F69E6B = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -117,9 +167,20 @@
 			projectRoot = "";
 			targets = (
 				DA15FD341FA0202F00E60278 /* potential-bassoon */,
+				DA5E5CFA1FA16FC900F69E6B /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA5E5CF91FA16FC900F69E6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA15FD311FA0202F00E60278 /* Sources */ = {
@@ -127,7 +188,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5E5CF51FA14EB800F69E6B /* BassoonSession.m in Sources */,
+				DA5E5D061FA1753A00F69E6B /* NSArray+SucceedingObject.m in Sources */,
 				DA15FD391FA0202F00E60278 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA5E5CF71FA16FC900F69E6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5E5D031FA16FEF00F69E6B /* BassoonSession.m in Sources */,
+				DA5E5D071FA1760B00F69E6B /* NSArray+SucceedingObject.m in Sources */,
+				DA5E5CFE1FA16FC900F69E6B /* UnitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +327,32 @@
 			};
 			name = Release;
 		};
+		DA5E5D011FA16FC900F69E6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nth-estate.UnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA5E5D021FA16FC900F69E6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nth-estate.UnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -272,6 +370,15 @@
 			buildConfigurations = (
 				DA15FD3D1FA0202F00E60278 /* Debug */,
 				DA15FD3E1FA0202F00E60278 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA5E5D001FA16FC900F69E6B /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA5E5D011FA16FC900F69E6B /* Debug */,
+				DA5E5D021FA16FC900F69E6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

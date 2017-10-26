@@ -25,6 +25,8 @@
 /**
  Parse the string array into native types for use as arguments.
  
+ The arguments array must have at least one item in it.
+ 
  @returns Returns `nil` if all arguments have been parsed correctly.  Otherwise returns the a string describing what component failed.
  */
 -(nullable NSString *)parseArgumentsArray:(nonnull NSArray <NSString *> *)argumentsArray;
@@ -34,9 +36,9 @@
  
  This method is synchronous and returns only when the final success or failure of the network calls have been achieved.
  
- @returns Returns `YES` if the network request calls have all completed successfully.  `NO` if one or more request has failed.
+ @returns Returns the number of bytes downloaded.
  */
--(BOOL)requestData;
+-(NSInteger)requestData;
 
 
 @end
