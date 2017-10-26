@@ -19,8 +19,15 @@
 @property (nonatomic, nullable, strong) NSURL *destination;
 @property (nonatomic, nonnull, strong) NSURLSession *urlSession;
 
+// Support for verbose logging in DEBUG mode.
+@property (nonatomic) BOOL verboseLog;
+
 /**
  Generate the Range header string.
+ 
+ The range string is the inclusive byte indexes.
+ So a range of (8, 8) would result in `bytes=8-15`.
+ The last value is calculated by location + length - 1.
  
  @param range The range to generate the header for.
  @returns The value for the Range header.
